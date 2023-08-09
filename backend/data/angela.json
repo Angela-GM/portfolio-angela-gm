@@ -1,6 +1,7 @@
 {
     "_id":  "5f8f4f8f8f8f8f8f8f8f8f8f",
     "name": "Angela",
+    "surname": "Garcia",
     "contact": [
         {
             "type": "email",
