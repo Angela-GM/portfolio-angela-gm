@@ -1,0 +1,35 @@
+[
+    {
+        "_id": "5f8d0a5b9d9b3a2b3c9d9b3a",
+        "name": "ToDo App - TaskTime",
+        "description": "Este proyecto, que forma parte del plan de estudios del bootcamp de Ironhack, consiste en una aplicación web de tareas sencilla creada con Vue.js 3 que permite a los usuarios crear cuentas, registrar tareas, editarlas y marcarlas como completadas. Todos los datos de los usuarios y las tareas se almacenan en una base de datos de Supabase y se han creado estilos propios para la maquetación CSS.",
+        "languages": ["Vue.js", "JavaScript", "HTML5", "CSS3"],
+        "tools": ["Visual Studio Code", "Git", "GitHub", "Vite","Supabase"],
+        "images": ["https://res.cloudinary.com/drjyg98uv/image/upload/v1682094499/portfolio/task-app.png"],
+        "demo": "https://final-project-one-beta.vercel.app/",
+        "repo": "https://github.com/Angela-GM/final-project",
+        "category": "fullstack"
+    },
+    {
+        "_id": "5f8d0a5b9d9b3a2b3c9d9b3b",
+        "name": "JOBarcelona '23 | Frontend - CookBook Web",
+        "description": "Proyecto para optar como finalista en el Hackaton de JOBarcelona '23. Creación de una web de recetas que consume datos de la API spoonacular. Consta de un buscador de recetas con un filtro por tipo de dieta. Al seleccionar una receta se muestra la información especifica de esa receta.",
+        "languages": ["Vue.js", "CSS3", "JavaScript", "HTML5"],
+        "tools": ["Visual Studio Code", "Git", "GitHub", "Vite", "Spoonacular API", "Vercel"],
+        "images": ["https://res.cloudinary.com/drjyg98uv/image/upload/v1682094526/portfolio/cookbook.png"],
+        "demo": "https://jo-barcelona23-nuwe.vercel.app/",
+        "repo": "https://github.com/Angela-GM/JOBarcelona23-Nuwe",
+        "category": "frontend"
+    },
+    {
+        "_id": "5f8d0a5b9d9b3a2b3c9d9b3c",
+        "name": "Midterm - Circle Agency",
+        "description": "Replica de una web que forma parte del plan de estudios del Bootcamp en Ironhack a mitad de curso, usando las siguientes tecnologías: HTML5, CSS3, JavaScript, JSON, Placeholder API, Vercel, Visual Studio Code, Git",
+        "languages": ["HTML5", "CSS3", "JavaScript"],
+        "tools": ["Visual Studio Code", "Git", "GitHub", "Vercel", "Placeholder API", "JSON"],
+        "images": ["https://res.cloudinary.com/drjyg98uv/image/upload/v1682094507/portfolio/midtern.png"],
+        "demo": "https://midterm-ironhack-red.vercel.app/",
+        "repo": "https://github.com/Angela-GM/midterm-ironhack",
+        "category": "frontend"
+    }
+]

@@ -1,0 +1,77 @@
+{
+    "_id":  "5f8f4f8f8f8f8f8f8f8f8f8f",
+    "name": "Angela",
+    "contact": [
+        {
+            "type": "email",
+            "value": "angelagm0112@gmail.com"
+        },
+        {
+            "type": "phone",
+            "value": "696753758"
+        },
+        {
+            "type": "github",
+            "value": "https://github.com/Angela-GM"
+        },
+        {
+            "type": "linkedin",
+            "value": "https://www.linkedin.com/in/angela-garcia-mu/"
+        },
+        {
+            "type": "codewars",
+            "value": "https://www.codewars.com/users/Angela-GM"
+        },
+        {
+            "type": "medium",
+            "value": "https://medium.com/@angelagm0112"
+        },
+        {
+            "type": "nuwe",
+            "value": "https://nuwe.io/dev/profile/angelagm0112c508f7c863a204a9"
+        }
+    ],
+
+    
+        "aboutme": "Soy una Desarrolladora FullStack apasionada por la resolución deproblemas y con una excelente capacidad analítica. He exploradodiferentes ámbitos, el diseño UX, diseño gráfico y fotografía digital,pero mi verdadera pasión es la programación. Tras completar el Bootcamp de Desarrollador Frontend en Ironhack y el de FullStack en F5 he adquirido habilidades como el trabajo en equipo,capacidad de análisis, ser autodidacta, en el área que me encanta. Estoy ansiosa por seguir aprendiendo y evolucionando en mi carrera como Desarrolladora FullStack.",
+
+        "photo": "https://res.cloudinary.com/drjyg98uv/image/upload/v1691592903/portfolio/bgfcmhsrfwoajh94kebv.png",
+        "skills": {
+            "programmingLang": ["JavaScript", "HTML", "TypeScript", "CSS", "SASS", "SQL", "MongoDB"],              
+            "frameworks": ["React", "Vue.js 3", "Nest.js"],
+            "libraries": ["Bootstrap", "Tailwind CSS", "Styled Components"],
+            "backend": ["Node.js", "Nest.js"],
+            "databases": ["MongoDB", "MySQL"],
+            "testing": ["Jest", "Vitest"],
+            "tools": ["Git", "GitHub", "Postman", "VS Code", "Figma", "vite", "npm", "Adobe Photoshop", "Adobe Illustrator", "Adobe XD", "Thunder Client", "JWT", "Netlify", "Vercel", "Docker" ],
+            "others": ["SCRUM", "Agile", "Trello", "MVC", "REST API", "SEO", "UX/UI", "clean code", "responsive design", "SOLID", "TDD", "BEM", "OOP", "CI/CD", "apiRest"],
+            "languages":{ 
+                "spanish": "nativo",
+                "english": "A1",
+                "catalan": "bilingüe"
+             }
+        },
+        "studies": [
+            {
+                "name": "Bootcamp Fullstack (850h)",
+                "date": "2023",
+                "place": "Factoria F5",
+                "description": "Bootcamp intensivo de 850 horas de duración, en el que se han adquirido conocimientos de programación en el stack MERN (MongoDB, Express, React y Node.js), así como de otras tecnologías como TypeScript, Nest.js, Vue.js 3, MySQL, Docker, SCRUM, UX/UI, clean code, responsive design, SOLID, TDD, OOP, CI/CD, etc."
+            },
+            {
+                "name": "FrontEnd Developer Bootcamp (240 h)",
+                "date": "2023",
+                "place": "Ironhack",
+                "description": "Bootcamp intensivo de 240 horas de duración, en el que se han adquirido conocimientos de programación: html, Javascript ES6, CSS, responsive design, Vue.js, etc."
+            },
+            {
+                "name": "Diseño UX/UI (330 h)",
+                "date": "2022",
+                "place": "CIFO Hospitalet",
+                "description": "Curso de 330 horas de duración, en el que se han adquirido conocimientos de diseño UX/UI, además de herramientas como Adobe XD, Adobe Photoshop, Adobe Illustrator, etc."
+            }
+        ]
+        
+     
+    
+}
