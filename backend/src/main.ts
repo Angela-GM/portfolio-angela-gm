@@ -20,6 +20,6 @@ async function bootstrap() {
   // Configuración del ENDPOINT de la documentación de la API en /docs
   SwaggerModule.setup('docs', app, document);
 
-  await app.listen(3000);
+  await app.listen(process.env.PORT || 3000);
 }
 bootstrap();

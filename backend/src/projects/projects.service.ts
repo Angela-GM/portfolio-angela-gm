@@ -4,24 +4,20 @@ import { UpdateProjectDto } from './dto/update-project.dto';
 import { Project } from './schemas/project.schema';
 import { Model } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
-import * as data from 'data/projects.json';
+// import * as data from 'data/projects.json';
 
 @Injectable()
 export class ProjectsService {
-  // protptype(prototype: any, arg1: string) {
-  //   throw new Error('Method not implemented.');
-  // }
-  // constructor(
-  //   private readonly projectsService: ProjectsService,
-  //   @InjectModel(Project.name) private projectModel: Model<Project>,
-  // ) {}
+  constructor(
+    @InjectModel(Project.name) private projectModel: Model<Project>,
+  ) {}
+
   // create(createProjectDto: CreateProjectDto) {
   //   return 'This action adds a new project';
   // }
 
-  findAll() {
-    return data;
-    // return this.projectModel.find().exec();
+  async findAll() {
+    return await this.projectModel.find().exec();
   }
 
   // findOne(id: number) {

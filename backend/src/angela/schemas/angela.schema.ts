@@ -98,3 +98,5 @@ export class Angela {
     description: string;
   }[];
 }
+
+export const AngelaSchema = SchemaFactory.createForClass(Angela);
