@@ -58,6 +58,10 @@ El proyecto se encuentra en desarrollo. Se está trabajando en la estructura de 
 Este portafolio muestra mi experiencia en desarrollo frontend y backend. Puedes encontrar ejemplos de proyectos y su funcionamiento en la sección correspondiente.
 <!-- Estructura del proyecto y breve demostración -->
 
+<!-- Ejecutar el comando en la raiz del proyecto  tree-extended -ignore="node_modules, dist, .git" -max=2 -->
+<!-- https://github.com/rulyotano/tree-extended -->
+
+
 ## Acceso al proyecto
 Visita mi portafolio en: [https://portfolio-angela-gm.vercel.app/](https://portfolio-angela-gm.vercel.app/)
 
