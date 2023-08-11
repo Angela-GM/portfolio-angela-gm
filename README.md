@@ -1,2 +1,5 @@
-# portfolio-angela-gm
-Backend and frontend of angela's fullstack portfolio
+<h1> # Portfolio Angela Garcia FullStack Developer </h1>
+
+>>>>>>LOGO O FOTO DE PORTADA
+
+![GitHub Release Date - Published_At](https://img.shields.io/github/release-date/Angela-GM/portfolio-angela-gm)
