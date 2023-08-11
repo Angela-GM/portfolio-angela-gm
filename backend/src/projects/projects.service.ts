@@ -13,7 +13,13 @@ export class ProjectsService {
   ) {}
 
   async create(createProjectDto: CreateProjectDto) {
-    return await 'This action adds a new project';
+    // return await 'This action adds a new project';
+    try {
+      const createdProject = new this.projectModel(createProjectDto);
+      return await createdProject.save();
+    } catch (error) {
+      throw error;
+    }
   }
 
   async findAll() {

@@ -5,7 +5,9 @@ import {
   IsNotEmpty,
   IsString,
   IsEnum,
+  IsObject,
 } from 'class-validator';
+import { Languages, Skills } from './project.model';
 
 enum Category {
   Frontend = 'Frontend',
@@ -24,39 +26,25 @@ export class CreateProjectDto {
   @IsNotEmpty()
   description: string;
 
-  @ApiProperty({ example: ['JavaScript', 'HTML', 'CSS'] })
-  @IsArray()
-  programmingLang: string[];
-
-  @ApiProperty({ example: ['Vue.js'] })
-  @IsArray()
-  frameworks: string[];
-
-  @ApiProperty({ example: ['Bootstrap', 'Tailwind CSS', 'Styled Components'] })
-  @IsArray()
-  libraries: string[];
-
-  @ApiProperty({ example: ['Node.js', 'Nest.js'] })
-  @IsArray()
-  backend: string[];
-
-  @ApiProperty({ example: ['MongoDB'] })
-  @IsArray()
-  databases: string[];
-
-  @ApiProperty({ example: ['Vitest'] })
-  @IsArray()
-  testing: string[];
-
-  @ApiProperty({ example: ['Git', 'GitHub', 'Postman'] })
-  @IsArray()
-  tools: string[];
-
   @ApiProperty({
-    example: ['SCRUM', 'Agile', 'Trello', 'MVC', 'REST API', 'SEO', 'UX/UI'],
+    example: [
+      { programmingLang: ['JavaScript', 'TypeScript'], frameworks: ['React'] },
+      // ... otros ejemplos ...
+    ],
   })
-  @IsArray()
-  others: string[];
+  @IsObject()
+  skills: Skills;
+  @ApiProperty({
+    example: [
+      {
+        spanish: 'nativo',
+        english: 'A1',
+        catalan: 'bilingüe',
+      },
+    ],
+  })
+  @IsObject()
+  languages: Languages;
 
   @ApiProperty({
     example: [

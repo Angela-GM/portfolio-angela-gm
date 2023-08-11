@@ -5,6 +5,7 @@ import mongoose, {
   Schema as MongooseSchema,
   Types,
 } from 'mongoose';
+import { Languages, Skills } from '../dto/project.model';
 
 export type projectDocument = HydratedDocument<Project>;
 
@@ -18,39 +19,31 @@ export class Project {
   @Prop({ required: true })
   description: string;
 
-  @ApiProperty({ example: ['JavaScript', 'HTML', 'CSS'] })
-  @Prop({ required: true })
-  programmingLang: string[];
-
-  @ApiProperty({ example: ['Vue.js'] })
-  @Prop({ required: false })
-  frameworks: string[];
-
-  @ApiProperty({ example: ['Bootstrap', 'Tailwind CSS', 'Styled Components'] })
-  @Prop({ required: false })
-  libraries: string[];
-
-  @ApiProperty({ example: ['Node.js', 'Nest.js'] })
-  @Prop({ required: false })
-  backend: string[];
-
-  @ApiProperty({ example: ['MongoDB'] })
-  @Prop({ required: false })
-  databases: string[];
-
-  @ApiProperty({ example: ['Vitest'] })
-  @Prop({ required: false })
-  testing: string[];
-
-  @ApiProperty({ example: ['Git', 'GitHub', 'Postman'] })
-  @Prop({ required: true })
-  tools: string[];
+  @ApiProperty({
+    example: [
+      {
+        skills: {
+          programmingLang: ['JavaScript', 'TypeScript'],
+          frameworks: ['React'],
+        },
+      },
+      // ... otros ejemplos ...
+    ],
+  })
+  @Prop({ type: Skills }) // Usa el tipo Skills aquí
+  skills: Skills;
 
   @ApiProperty({
-    example: ['SCRUM', 'Agile', 'Trello', 'MVC', 'REST API', 'SEO', 'UX/UI'],
+    example: [
+      {
+        spanish: 'nativo',
+        english: 'A1',
+        catalan: 'bilingüe',
+      },
+    ],
   })
-  @Prop({ required: false })
-  others: string[];
+  @Prop({ type: Languages }) // Usa el tipo Languages aquí
+  languages: Languages;
 
   @ApiProperty({
     example: [

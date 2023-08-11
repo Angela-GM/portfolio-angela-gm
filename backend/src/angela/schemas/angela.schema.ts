@@ -53,18 +53,47 @@ export class Angela {
 
   @ApiProperty({
     example: [
-      { type: 'programmingLang', value: 'JavaScript' },
-      { type: 'frameworks', value: 'React' },
+      { programmingLang: ['JavaScript', 'TypeScript'], frameworks: ['React'] },
       // ... otros ejemplos ...
     ],
   })
   @Prop([
     {
-      type: { type: String },
-      value: String,
+      programmingLang: [String],
+      frameworks: [String],
+      libraries: [String],
+      backend: [String],
+      databases: [String],
+      testing: [String],
+      tools: [String],
+      others: [String],
     },
   ])
-  skills: { type: string; value: string }[];
+  skills: {
+    programmingLang: string[];
+    frameworks: string[];
+    libraries: string[];
+    backend: string[];
+    databases: string[];
+    testing: string[];
+    tools: string[];
+    others: string[];
+  };
+
+  @ApiProperty({
+    example: [
+      {
+        spanish: 'nativo',
+        english: 'A1',
+        catalan: 'bilingüe',
+      },
+    ],
+  })
+  languages: {
+    spanish: string;
+    english: string;
+    catalan: string;
+  };
 
   @ApiProperty({
     example: [

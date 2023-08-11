@@ -45,13 +45,14 @@
             "databases": ["MongoDB", "MySQL"],
             "testing": ["Jest", "Vitest"],
             "tools": ["Git", "GitHub", "Postman", "VS Code", "Figma", "vite", "npm", "Adobe Photoshop", "Adobe Illustrator", "Adobe XD", "Thunder Client", "JWT", "Netlify", "Vercel", "Docker" ],
-            "others": ["SCRUM", "Agile", "Trello", "MVC", "REST API", "SEO", "UX/UI", "clean code", "responsive design", "SOLID", "TDD", "BEM", "OOP", "CI/CD", "apiRest"],
-            "languages":{ 
-                "spanish": "nativo",
-                "english": "A1",
-                "catalan": "bilingüe"
-             }
+            "others": ["SCRUM", "Agile", "Trello", "MVC", "REST API", "SEO", "UX/UI", "clean code", "responsive design", "SOLID", "TDD", "BEM", "OOP", "CI/CD", "apiRest"]
+           
         },
+        "languages":{ 
+            "spanish": "nativo",
+            "english": "A1",
+            "catalan": "bilingüe"
+         },
         "studies": [
             {
                 "name": "Bootcamp Fullstack (850h)",
