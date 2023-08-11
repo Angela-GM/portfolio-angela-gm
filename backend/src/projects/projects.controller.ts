@@ -8,16 +8,17 @@ import {
   Delete,
 } from '@nestjs/common';
 import { ProjectsService } from './projects.service';
+import { CreateProjectDto } from './dto/create-project.dto';
 // import * as data from '../../data/projects.json';
 
 @Controller('projects')
 export class ProjectsController {
   constructor(private readonly projectsService: ProjectsService) {}
 
-  // @Post()
-  // create(@Body() createProjectDto: CreateProjectDto) {
-  //   return this.projectsService.create(createProjectDto);
-  // }
+  @Post()
+  create(@Body() createProjectDto: CreateProjectDto) {
+    return this.projectsService.create(createProjectDto);
+  }
 
   @Get()
   findAll() {

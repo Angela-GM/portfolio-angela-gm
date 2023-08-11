@@ -23,23 +23,23 @@ export class Project {
   programmingLang: string[];
 
   @ApiProperty({ example: ['Vue.js'] })
-  @Prop({ required: true })
+  @Prop({ required: false })
   frameworks: string[];
 
   @ApiProperty({ example: ['Bootstrap', 'Tailwind CSS', 'Styled Components'] })
-  @Prop({ required: true })
+  @Prop({ required: false })
   libraries: string[];
 
   @ApiProperty({ example: ['Node.js', 'Nest.js'] })
-  @Prop({ required: true })
+  @Prop({ required: false })
   backend: string[];
 
   @ApiProperty({ example: ['MongoDB'] })
-  @Prop({ required: true })
+  @Prop({ required: false })
   databases: string[];
 
   @ApiProperty({ example: ['Vitest'] })
-  @Prop({ required: true })
+  @Prop({ required: false })
   testing: string[];
 
   @ApiProperty({ example: ['Git', 'GitHub', 'Postman'] })
@@ -49,7 +49,7 @@ export class Project {
   @ApiProperty({
     example: ['SCRUM', 'Agile', 'Trello', 'MVC', 'REST API', 'SEO', 'UX/UI'],
   })
-  @Prop({ required: true })
+  @Prop({ required: false })
   others: string[];
 
   @ApiProperty({

@@ -12,9 +12,9 @@ export class ProjectsService {
     @InjectModel(Project.name) private projectModel: Model<Project>,
   ) {}
 
-  // create(createProjectDto: CreateProjectDto) {
-  //   return 'This action adds a new project';
-  // }
+  async create(createProjectDto: CreateProjectDto) {
+    return await 'This action adds a new project';
+  }
 
   async findAll() {
     return await this.projectModel.find().exec();
