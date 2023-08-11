@@ -1,9 +1,3 @@
-
->>>>>>LOGO O FOTO DE PORTADA
-
-
-
-
 ## Título e imagen de portada
 <h1>Portfolio Angela Garcia FullStack Developer </h1>
 <!-- Poner una imagen de portada aqui o logo -->
@@ -16,6 +10,11 @@
    ![GitHub top language](https://img.shields.io/github/languages/top/Angela-GM/portfolio-angela-gm)
    ![GitHub language count](https://img.shields.io/github/languages/count/Angela-GM/portfolio-angela-gm)
    [![CodeFactor](https://www.codefactor.io/repository/github/angela-gm/portfolio-angela-gm/badge)](https://www.codefactor.io/repository/github/angela-gm/portfolio-angela-gm)
+
+
+
+
+
 
 
 
