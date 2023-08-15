@@ -5,6 +5,7 @@ import { ProjectsModule } from './projects/projects.module';
 import { AngelaModule } from './angela/angela.module';
 import * as dotenv from 'dotenv';
 import { MongooseModule } from '@nestjs/mongoose';
+import { AuthModule } from './auth/auth.module';
 dotenv.config();
 @Module({
   imports: [
@@ -17,6 +18,7 @@ dotenv.config();
     }),
     ProjectsModule,
     AngelaModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
