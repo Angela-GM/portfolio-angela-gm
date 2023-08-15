@@ -12,7 +12,7 @@ import { UsersModule } from 'src/users/users.module';
       imports: [ConfigModule],
       useFactory: async (configService: ConfigService) => ({
         global: true,
-        secret: configService.get<string>('SECRET'),
+        secret: configService.get<string>(process.env.SECRET),
       }),
       inject: [ConfigService],
     }),
