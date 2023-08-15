@@ -23,12 +23,15 @@ export class AuthService {
   ) {}
 
   async validatePassword(password: string, encriptedPassword: string) {
+    console.log(`Comparando password: ${password} and ${encriptedPassword}`);
+
     return compare(password, encriptedPassword);
   }
 
   async login(user: GetUserLoginDto) {
     const { email, password } = user;
     const findUser = await this.userService.findOneLogin(email);
+    console.log(findUser);
     if (!findUser)
       throw new HttpException('USER_NOT_FOUND', HttpStatus.NOT_FOUND);
 
@@ -36,6 +39,8 @@ export class AuthService {
       password,
       findUser.password,
     );
+    console.log(`dentro ${checkPassword}`);
+
     if (!checkPassword)
       throw new HttpException('INCORRECT_PASSWORD', HttpStatus.FORBIDDEN);
 
@@ -45,6 +50,7 @@ export class AuthService {
     };
 
     const token = await this.jwtService.signAsync(payload, { expiresIn: '1d' });
+    console.log(token);
 
     return {
       message: 'Login success.',
@@ -57,6 +63,8 @@ export class AuthService {
   async register(user: RegisterUserDto) {
     try {
       user.password = await this.encryptPassword(user.password);
+      console.log('hola');
+      console.log(`log de register ${user.password}`);
       const { data, message, status } = await this.userService.create(user);
       return {
         message: 'User registered successfully',
@@ -64,6 +72,7 @@ export class AuthService {
         data: data,
       };
     } catch (error) {
+      console.log(error);
       throw error;
     }
   }
@@ -116,6 +125,7 @@ export class AuthService {
   async encryptPassword(password: string): Promise<string> {
     try {
       const salt = await genSalt(10);
+      console.log(hash(password, salt));
       return hash(password, salt);
     } catch (error) {
       throw new InternalServerErrorException();

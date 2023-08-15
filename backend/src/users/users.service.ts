@@ -12,8 +12,7 @@ import { User } from './schemas/user.schema';
 import { RegisterUserDto } from 'src/auth/dto/register-user.dto';
 import { RecoverUserDto } from 'src/auth/dto/recover-user.dto';
 import { RecoverRequestDto } from 'src/auth/dto/recover-request.dto';
-import { NotFoundError } from 'rxjs';
-import { AnyCnameRecord } from 'dns';
+import * as bcrypt from 'bcrypt';
 
 @Injectable()
 export class UsersService {
@@ -22,10 +21,12 @@ export class UsersService {
   async create(user: RegisterUserDto) {
     try {
       const result = await this.userModel.find({ email: user.email });
-
       if (result.length !== 0) {
         return { message: 'User already exists' };
       } else {
+        user.password = await bcrypt.hash(user.password, 10);
+        console.log('Hashed Password:', user.password);
+
         await this.userModel.create(user);
         return {
           message: 'User created succesfully',
@@ -60,12 +61,14 @@ export class UsersService {
       const user = await this.userModel
         .findOne({ _id: id })
         .select('-password -recovery_token');
+      console.log(user);
       return {
         message: 'User retrived successfully',
         status: 200,
         data: user,
       };
     } catch (error) {
+      console.log(error);
       throw error;
     }
   }

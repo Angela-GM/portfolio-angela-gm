@@ -9,15 +9,15 @@ import {
   Delete,
   Query,
   UseGuards,
-  Req,
 } from '@nestjs/common';
 import { UsersService } from './users.service';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { ObjectId } from 'mongoose';
 import { RegisterUserDto } from '../auth/dto/register-user.dto';
 // import { AuthGuard } from '../auth/guards/auth.guard';
-import { AuthGuard } from 'src/auth/guards/auth.guards';
+
 import { UpdateUserByAdminDto } from './dto/update-user-byadmin.dto ';
+import { AuthGuard } from 'src/auth/guards/auth.guard';
 // import { request } from 'express';
 
 @Controller('users')
