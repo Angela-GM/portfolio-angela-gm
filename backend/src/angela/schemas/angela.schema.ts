@@ -59,14 +59,16 @@ export class Angela {
   })
   @Prop([
     {
-      programmingLang: [String],
-      frameworks: [String],
-      libraries: [String],
-      backend: [String],
-      databases: [String],
-      testing: [String],
-      tools: [String],
-      others: [String],
+      skills: {
+        programmingLang: [String],
+        frameworks: [String],
+        libraries: [String],
+        backend: [String],
+        databases: [String],
+        testing: [String],
+        tools: [String],
+        others: [String],
+      },
     },
   ])
   skills: {

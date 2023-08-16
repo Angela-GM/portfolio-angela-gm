@@ -1,15 +1,7 @@
-import {
-  Controller,
-  Get,
-  Post,
-  Body,
-  Patch,
-  Param,
-  Delete,
-} from '@nestjs/common';
+import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { AngelaService } from './angela.service';
+import { ObjectId } from 'mongoose';
 import { CreateAngelaDto } from './dto/create-angela.dto';
-import { UpdateAngelaDto } from './dto/update-angela.dto';
 
 @Controller('angela')
 export class AngelaController {
@@ -25,10 +17,16 @@ export class AngelaController {
     return this.angelaService.findAll();
   }
 
-  // @Get(':id')
-  // findOne(@Param('id') id: string) {
-  //   return this.angelaService.findOne(+id);
+  // @Get('skills')
+  // async getAngelaSkills() {
+  //   const angelaSkills = await this.angelaService.getAngelaSkills();
+  //   return angelaSkills || [];
   // }
+
+  @Get(':id')
+  findOne(@Param('id') id: ObjectId) {
+    return this.angelaService.findOne(id);
+  }
 
   // @Patch(':id')
   // update(@Param('id') id: string, @Body() updateAngelaDto: UpdateAngelaDto) {
