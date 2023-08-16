@@ -25,8 +25,6 @@ export class UsersService {
         return { message: 'User already exists' };
       } else {
         user.password = await bcrypt.hash(user.password, 10);
-        console.log('Hashed Password:', user.password);
-
         await this.userModel.create(user);
         return {
           message: 'User created succesfully',
@@ -68,7 +66,6 @@ export class UsersService {
         data: user,
       };
     } catch (error) {
-      console.log(error);
       throw error;
     }
   }

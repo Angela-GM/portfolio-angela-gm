@@ -17,7 +17,7 @@ import { RegisterUserDto } from '../auth/dto/register-user.dto';
 // import { AuthGuard } from '../auth/guards/auth.guard';
 
 import { UpdateUserByAdminDto } from './dto/update-user-byadmin.dto ';
-import { AuthGuard } from 'src/auth/guards/auth.guard';
+import { AuthGuard } from '../auth/guards/auth.guard';
 // import { request } from 'express';
 
 @Controller('users')

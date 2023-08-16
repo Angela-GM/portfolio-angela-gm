@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { CreateProjectDto } from './dto/create-project.dto';
 import { UpdateProjectDto } from './dto/update-project.dto';
 import { Project } from './schemas/project.schema';
-import { Model } from 'mongoose';
+import { Model, ObjectId } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
 // import * as data from 'data/projects.json';
 
@@ -26,9 +26,14 @@ export class ProjectsService {
     return await this.projectModel.find().exec();
   }
 
-  // findOne(id: number) {
-  //   return `This action returns a #${id} project`;
-  // }
+  async findOne(id: ObjectId) {
+    try {
+      const project = await this.projectModel.findById(id);
+      return project;
+    } catch (error) {
+      throw error;
+    }
+  }
 
   // update(id: number, updateProjectDto: UpdateProjectDto) {
   //   return `This action updates a #${id} project`;

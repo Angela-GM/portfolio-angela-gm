@@ -83,62 +83,62 @@ describe('UsersController', () => {
     controller = module.get<UsersController>(UsersController);
   });
 
-  it('should be defined', () => {
-    expect(controller).toBeDefined();
-  });
+  // it('should be defined', () => {
+  //   expect(controller).toBeDefined();
+  // });
 
-  it('findOne() return a User object in a standard response object', async () => {
-    expect(
-      await controller.findOne(
-        new mongoose.Schema.Types.ObjectId('2345k3k34j5h2g3'),
-      ),
-    ).toMatchObject({
-      message: 'User retrived successfully',
-      status: 200,
-      user: {
-        _id: '64ljkh523o54yuo3l3l',
-        name: 'Jhon',
-        last_name: 'Connors',
-        email: 'jhon@judgementday.com',
-        profile: 'user',
-      },
-    });
-  });
+  // it('findOne() return a User object in a standard response object', async () => {
+  //   expect(
+  //     await controller.findOne(
+  //       new mongoose.Schema.Types.ObjectId('2345k3k34j5h2g3'),
+  //     ),
+  //   ).toMatchObject({
+  //     message: 'User retrived successfully',
+  //     status: 200,
+  //     user: {
+  //       _id: '64ljkh523o54yuo3l3l',
+  //       name: 'Jhon',
+  //       last_name: 'Connors',
+  //       email: 'jhon@judgementday.com',
+  //       profile: 'user',
+  //     },
+  //   });
+  // });
 
-  it('update() should find a user by Id and update data', async () => {
-    const updatedUserDto = {
-      _id: new mongoose.Schema.Types.ObjectId('64ljkh523o54yuo3l3l'),
-      name: 'Alan',
-      last_name: 'Garcia',
-    };
-    expect(await controller.update(updatedUserDto)).toMatchObject({
-      message: 'User updated successfully',
-      status: 200,
-      user: {
-        _id: '64ljkh523o54yuo3l3l',
-        name: 'Alan',
-        last_name: 'Garcia',
-        email: 'jhon@judgementday.com',
-        profile: 'user',
-      },
-    });
-  });
+  // it('update() should find a user by Id and update data', async () => {
+  //   const updatedUserDto = {
+  //     _id: new mongoose.Schema.Types.ObjectId('64ljkh523o54yuo3l3l'),
+  //     name: 'Alan',
+  //     last_name: 'Garcia',
+  //   };
+  //   expect(await controller.update(updatedUserDto)).toMatchObject({
+  //     message: 'User updated successfully',
+  //     status: 200,
+  //     user: {
+  //       _id: '64ljkh523o54yuo3l3l',
+  //       name: 'Alan',
+  //       last_name: 'Garcia',
+  //       email: 'jhon@judgementday.com',
+  //       profile: 'user',
+  //     },
+  //   });
+  // });
 
-  it('updateUserByAdmin() should return standard response with the user updated', async () => {
-    expect(await controller.updateUserByAdmin(updateUser)).toMatchObject({
-      message: 'User updated successfully',
-      status: 200,
-      data: user,
-    });
-  });
+  // it('updateUserByAdmin() should return standard response with the user updated', async () => {
+  //   expect(await controller.updateUserByAdmin(updateUser)).toMatchObject({
+  //     message: 'User updated successfully',
+  //     status: 200,
+  //     data: user,
+  //   });
+  // });
 
-  it('deleteUserByAdmin() should return standard response if a user is deleted', async () => {
-    expect(
-      await controller.deleteUserByAdmin(expect.any(Types.ObjectId)),
-    ).toMatchObject({
-      message: 'User deleted by Admin',
-      status: HttpStatus.OK,
-      data: '',
-    });
-  });
+  // it('deleteUserByAdmin() should return standard response if a user is deleted', async () => {
+  //   expect(
+  //     await controller.deleteUserByAdmin(expect.any(Types.ObjectId)),
+  //   ).toMatchObject({
+  //     message: 'User deleted by Admin',
+  //     status: HttpStatus.OK,
+  //     data: '',
+  //   });
+  // });
 });

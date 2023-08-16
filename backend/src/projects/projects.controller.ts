@@ -10,7 +10,8 @@ import {
 } from '@nestjs/common';
 import { ProjectsService } from './projects.service';
 import { CreateProjectDto } from './dto/create-project.dto';
-import { AuthGuard } from 'src/auth/guards/auth.guard';
+import { AuthGuard } from '../auth/guards/auth.guard';
+import { ObjectId } from 'mongoose';
 
 // import * as data from '../../data/projects.json';
 
@@ -27,5 +28,10 @@ export class ProjectsController {
   @Get()
   findAll() {
     return this.projectsService.findAll();
+  }
+
+  @Get(':id')
+  findOne(@Param('id') id: ObjectId) {
+    return this.projectsService.findOne(id);
   }
 }

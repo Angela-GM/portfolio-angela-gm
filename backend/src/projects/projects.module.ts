@@ -6,7 +6,6 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { Angela, AngelaSchema } from 'src/angela/schemas/angela.schema';
 import { Project, ProjectSchema } from './schemas/project.schema';
 import { JwtModule } from '@nestjs/jwt'; // Asegúrate de importar JwtModule
-
 @Module({
   imports: [
     JwtModule.register({ secret: process.env.SECRET }), // Configura JwtModule aquí

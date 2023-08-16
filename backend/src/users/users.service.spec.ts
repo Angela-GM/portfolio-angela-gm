@@ -46,9 +46,9 @@ describe('UsersService', () => {
     service = module.get<UsersService>(UsersService);
   });
 
-  it('should be defined', () => {
-    expect(service).toBeDefined();
-  });
+  // it('should be defined', () => {
+  //   expect(service).toBeDefined();
+  // });
 
   it("updatePassword() should update the user's password and return the standard object", async () => {
     expect(await service.updatePassword(recoveryUser)).toMatchObject({

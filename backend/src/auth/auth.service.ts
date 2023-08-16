@@ -13,7 +13,7 @@ import { JwtService } from '@nestjs/jwt';
 import { RecoverRequestDto } from './dto/recover-request.dto';
 import { hash, genSalt, compare } from 'bcrypt';
 import { GetUserLoginDto } from './dto/get-user-login';
-import { sendEmail } from 'src/utils/mail-sender';
+import { sendEmail } from '../utils/mail-sender';
 
 @Injectable()
 export class AuthService {
@@ -23,8 +23,6 @@ export class AuthService {
   ) {}
 
   async validatePassword(password: string, encriptedPassword: string) {
-    console.log(`Comparando password: ${password} and ${encriptedPassword}`);
-
     return compare(password, encriptedPassword);
   }
 
@@ -39,7 +37,6 @@ export class AuthService {
       password,
       findUser.password,
     );
-    console.log(`dentro ${checkPassword}`);
 
     if (!checkPassword)
       throw new HttpException('INCORRECT_PASSWORD', HttpStatus.FORBIDDEN);
@@ -50,7 +47,6 @@ export class AuthService {
     };
 
     const token = await this.jwtService.signAsync(payload, { expiresIn: '1d' });
-    console.log(token);
 
     return {
       message: 'Login success.',
@@ -72,7 +68,6 @@ export class AuthService {
         data: data,
       };
     } catch (error) {
-      console.log(error);
       throw error;
     }
   }
@@ -105,7 +100,7 @@ export class AuthService {
     try {
       const { sub, email } = await this.jwtService.verifyAsync(
         user.recovery_token,
-        { secret: 'Th3 s3cr3t t0 k33p s4v3 t0k3ns 4nd s3rv3r' },
+        { secret: process.env.SECRET },
       );
       user._id = sub;
       user.email = email;
