@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --bg-primary: #fafafa;
+  --text-primary: #020202;
+}
+
+/* Colores para el modo oscuro */
+.dark {
+  --bg-primary: #020202;
+  --text-primary: #fafafa;
+}
+
+.light {
+  --bg-primary: #fafafa;
+  --text-primary: #020202;
+}

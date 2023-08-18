@@ -1,14 +1,12 @@
-import './App.css'
+import Home from "./pages/Home"
+import { ThemeProvider } from "./providers/ThemeProvider"
 
 function App() {
- 
 
   return (
-    <>
-      <p>Soy App</p>
-     
-      
-    </>
+    <ThemeProvider>
+      <Home />
+    </ThemeProvider>
   )
 }
 
