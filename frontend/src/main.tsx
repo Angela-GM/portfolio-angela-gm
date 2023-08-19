@@ -8,7 +8,6 @@ import {
 } from "react-router-dom";
 import Home from "./components/routes/Home.tsx";
 import { ThemeProvider } from "./providers/ThemeProvider.tsx";
-import Header from "./components/Header.tsx";
 import Layout from "./providers/Layout.tsx";
 import Projects from "./components/routes/Projects.tsx";
 import Blog from "./components/routes/Blog.tsx";
