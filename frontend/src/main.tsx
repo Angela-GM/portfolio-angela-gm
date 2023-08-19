@@ -20,7 +20,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
    <ThemeProvider>
       <BrowserRouter>
         <Layout>
-          <Header />
+          {/* <Header /> */}
           <Routes> {/* Define tus rutas dentro de Routes */}
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
