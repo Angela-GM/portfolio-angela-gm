@@ -1,17 +1,10 @@
-import Home from "./pages/Home";
+import { Outlet } from "react-router-dom";
 
-import { ThemeProvider } from "./providers/ThemeProvider";
 
 function App() {
   return (
-
-      <ThemeProvider>
-
-
-        <Home />
-      </ThemeProvider>
-  );
+<Outlet />
+ );
 }
-
 
 export default App;

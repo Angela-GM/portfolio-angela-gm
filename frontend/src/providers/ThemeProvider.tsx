@@ -1,70 +1,68 @@
-import { Dispatch, SetStateAction, createContext, useEffect, useLayoutEffect, useRef, useState } from "react"
+import { Dispatch, SetStateAction, createContext, useEffect, useLayoutEffect, useRef, useState } from "react";
 
-type Theme = 'light' | 'dark'
+type Theme = 'light' | 'dark';
 
 const usePrevious = (value: Theme) => {
-    const ref = useRef<Theme>()
+  const ref = useRef<Theme>(value);
 
-    useEffect(() => {
-        ref.current = value
+  useEffect(() => {
+    ref.current = value;
+  }, [value]);
 
-    }, [value])
-
-    return ref.current;
-}
+  return ref.current;
+};
 
 const getInitialTheme = (key: string): Theme => {
-    const storedTheme = window.localStorage.getItem(key) as Theme;
-    if (storedTheme) {
-        return storedTheme;
-    }
-    return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark").matches ? "dark" : "light";
-}
+  const storedTheme = window.localStorage.getItem(key) as Theme;
+  if (storedTheme) {
+    return storedTheme;
+  }
+  return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+};
 
 const useStorageTheme = (key: string): [Theme, Dispatch<SetStateAction<Theme>>] => {
-  
-    const [ theme, setTheme ] = useState<Theme>(getInitialTheme(key));
+  const [theme, setTheme] = useState<Theme>(getInitialTheme(key));
 
-    useEffect(() => {
-        window.localStorage.setItem(key, theme);
-    }, [theme, key])
+  useEffect(() => {
+    window.localStorage.setItem(key, theme.toString());
+  }, [theme, key]);
 
-    return [theme, setTheme]
-}
+  return [theme, setTheme];
+};
 
 type ThemeContextProps = {
-    theme: Theme;
-    toggleTheme: () => void;
-}
+  theme: Theme;
+  toggleTheme: () => void;
+};
 
 export const ThemeContext = createContext<ThemeContextProps>({
-    theme: 'light',
-    toggleTheme: () => {
-        console.log('hola');
-        
-              
-    } 
-})
+  theme: 'light',
+  toggleTheme: () => {
+    console.log('hola');
+  }
+});
 
 type PropsProvider = {
-    children: React.ReactNode;
-}
-export const ThemeProvider = ({children}: PropsProvider) => {
-    const [ theme, setTheme ] = useStorageTheme("theme");
+  children: React.ReactNode;
+};
 
-    const oldTheme = usePrevious(theme);
+export const ThemeProvider = ({ children }: PropsProvider) => {
+  const [theme, setTheme] = useStorageTheme("theme");
 
-    useLayoutEffect(() => {
-        document.documentElement.classList.remove(oldTheme as string);
-        document.documentElement.classList.add(theme);
-    }, [theme, oldTheme])
+  const oldTheme = usePrevious(theme);
 
-    const toggleTheme = () => {
-        setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
-    }
-    return (
-        <ThemeContext.Provider value={{ theme, toggleTheme }}>
-            {children}
-        </ThemeContext.Provider>
-    );
-}
+  useLayoutEffect(() => {
+    document.documentElement.classList.remove(oldTheme as string);
+    document.documentElement.classList.add(theme);
+  }, [theme, oldTheme]);
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
+  };
+
+  return (
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      {children}
+    </ThemeContext.Provider>
+  );
+};
