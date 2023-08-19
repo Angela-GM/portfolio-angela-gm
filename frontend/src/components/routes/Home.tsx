@@ -1,7 +1,7 @@
 
 function Home() {
   return (
-<div className="dark:bg-bg-primary dark:text-text-primary">
+<div className="container mx-auto dark:bg-bg-primary dark:text-text-primary">
     <h1>Hola, soy Angela GM.</h1>
     <h2>FullStack Developer.</h2>
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis fugit labore ea magnam laborum vero pariatur molestias dolor ullam incidunt non aliquam, accusantium optio totam sed illo nihil minus facilis.</p>

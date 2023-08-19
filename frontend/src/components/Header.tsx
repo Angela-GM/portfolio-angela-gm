@@ -10,7 +10,7 @@ function Header({ toggleTheme, theme }: HeaderProps) {
   return (
       <header className="sticky top-0 z-40 w-full dark:bg-bg-primary/50 dark:text-text-primary backdrop-blur-md">
           <div className="container py-5 mx-auto" style={{ opacity: 1, transform: "none" }}>
-              <div className="hidden h-20 items-center md:flex justify-between">
+              <div className="container hidden h-20 items-center md:flex justify-between">
                   <p className="hidden text-2xl font-bold md:inline-block">Angela GM</p>
                   <div className='flex justify-end'>
 
