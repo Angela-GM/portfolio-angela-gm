@@ -81,7 +81,7 @@ Visita mi portafolio en: [https://portfolio-angela-gm.vercel.app/](https://portf
 
 ## Licencia
 
-
+<a href="https://www.freepik.es/vector-gratis/ilustracion-concepto-mecanografia-codigo_10259340.htm#&position=2">Imagen de storyset</a> en Freepik
 
 [![CC BY-NC-ND](https://licensebuttons.net/l/by-nc-nd/3.0/88x31.png)](http://creativecommons.org/licenses/by-nc-nd/3.0/)
 
