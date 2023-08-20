@@ -53,8 +53,8 @@ useEffect(() => {
     const fetchAngela = async () => {
       try {
         const response: AxiosResponse = await getAllInfoAngela();
-        // console.log(response.data.data);
-        setAngela(response.data.data);
+        console.log(response.data[0]);
+        setAngela(response.data);
       } catch (error) {
         console.error("Error al obtener los cursos:", error);
       } 
@@ -62,7 +62,7 @@ useEffect(() => {
    
     fetchAngela()
     console.log(angela)
-  }, [angela]);
+  }, []);
   
   return (
 <div className="container min-h-screen2 h-screen mx-auto max-w-screen-xl dark:bg-bg-primary dark:text-text-primary">
