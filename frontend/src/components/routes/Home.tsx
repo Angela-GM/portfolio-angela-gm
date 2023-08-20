@@ -1,7 +1,7 @@
 function Home() {
   return (
-    <div className="container h-screen mx-auto max-w-screen-xl dark:bg-bg-primary dark:text-text-primary ">
-      <div className="flex flex-row w-full justify-between items-center my-6  ">
+    <div className="container min-h-screen2 mx-auto max-w-screen-xl dark:bg-bg-primary dark:text-text-primary overflow-y-hidden">
+      <div className="flex flex-row w-full justify-between items-center my-6">
         <div className="w-1/2">
           <h1 className="font-bold text-5xl">Hola, soy Angela GM;</h1>
           <h2 className="text-teal-500 font-semibold text-2xl">FullStack Developer;</h2>

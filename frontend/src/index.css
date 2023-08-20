@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+.min-h-screen2 {
+  height: calc(100vh - 7.5rem);
+}
 
 /* 
 :root {
