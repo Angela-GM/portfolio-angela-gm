@@ -28,8 +28,8 @@ function Home() {
               <TfiLinkedin />
             </a>
             <a className=" rounded text-teal-500 p-2 hover:bg-teal-500 hover:text-white transition duration-300"
-              href="../../../public/cv-angela-garcia-fullstack.pdf"
-              download={cvPdf}
+              href={cvPdf}
+              download="cv-angela-gm-dev-fullstack.pdf"
             >
               <FaFilePdf />
             </a>
