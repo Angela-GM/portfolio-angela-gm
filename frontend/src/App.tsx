@@ -1,18 +1,10 @@
-import './App.css'
+import { Outlet } from "react-router-dom";
+
 
 function App() {
- 
-
   return (
-    <>
-      <p>Soy App</p>
-     
-
-     
-     
-      
-    </>
-  )
+<Outlet />
+ );
 }
 
-export default App
+export default App;
