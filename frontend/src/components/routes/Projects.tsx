@@ -1,6 +1,8 @@
 function Projects() {
   return (
-    <div>Projects</div>
+<div className="container h-screen mx-auto max-w-screen-xl dark:bg-bg-primary dark:text-text-primary">
+  
+      Projects</div>
   )
 }
 

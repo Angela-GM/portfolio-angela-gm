@@ -2,10 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+/* 
 :root {
   --bg-primary: #fafafa;
   --text-primary: #020202;
-}
+} */
 
 /* Colores para el modo oscuro */
 .dark {
@@ -16,4 +19,10 @@
 .light {
   --bg-primary: #fafafa;
   --text-primary: #020202;
+}
+
+@layer base {
+  html {
+    font-family: 'Montserrat', sans-serif;
+  }
 }

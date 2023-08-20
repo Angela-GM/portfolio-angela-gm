@@ -1,6 +1,7 @@
 function AboutMe() {
   return (
-    <div>AboutMe</div>
+<div className="container h-screen mx-auto max-w-screen-xl dark:bg-bg-primary dark:text-text-primary">
+    </div>
   )
 }
 

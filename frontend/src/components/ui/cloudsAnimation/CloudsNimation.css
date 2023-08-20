@@ -1,0 +1,34 @@
+/* @path: "https://d2ivinrtblykd3.cloudfront.net/svg/"; */
+
+body {
+  background-color: #020202;
+}
+
+#cloudContainer {
+  position:relative;
+  width:100%;
+}
+
+.cloud{
+	 position:absolute;
+	 width:100px;
+	 height:50px;
+	 border-radius:40%;
+	 background-color:white;
+	 z-index: 1;
+	 &.cloud-0 {
+	 	width: 265px;
+	 	height: 65px;
+	 	background: transparent url('../../../../public/cloud001.svg') no-repeat;
+	 }
+	 &.cloud-1 {
+	 	width: 189px;
+	 	height: 65px;
+	 	background: transparent url('../../../../public/cloud002.svg') no-repeat;
+	 }
+	 &.cloud-2 {
+	 	width: 155px;
+	 	height: 38px;
+	 	background: transparent url('../../../../public/cloud003.svg') no-repeat;
+	 }
+} 
