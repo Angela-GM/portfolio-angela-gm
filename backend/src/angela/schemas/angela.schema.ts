@@ -57,20 +57,20 @@ export class Angela {
       // ... otros ejemplos ...
     ],
   })
-  @Prop([
-    {
-      skills: {
-        programmingLang: [String],
-        frameworks: [String],
-        libraries: [String],
-        backend: [String],
-        databases: [String],
-        testing: [String],
-        tools: [String],
-        others: [String],
-      },
-    },
-  ])
+  // @Prop([
+  //   {
+  //     skills: {
+  //       programmingLang: [String],
+  //       frameworks: [String],
+  //       libraries: [String],
+  //       backend: [String],
+  //       databases: [String],
+  //       testing: [String],
+  //       tools: [String],
+  //       others: [String],
+  //     },
+  //   },
+  // ])
   skills: {
     programmingLang: string[];
     frameworks: string[];
