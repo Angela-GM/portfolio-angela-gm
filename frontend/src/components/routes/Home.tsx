@@ -1,5 +1,6 @@
 import { TfiGithub, TfiLinkedin } from "react-icons/tfi";
 import { FaFilePdf } from 'react-icons/fa'
+import imgdev  from '../../assets/image-dev.svg'
 function Home() {
   return (
     <div className="container min-h-screen2 mx-auto max-w-screen-xl dark:bg-bg-primary dark:text-text-primary overflow-y-hidden">
@@ -35,7 +36,7 @@ function Home() {
         </div>
         <div>
           <img
-            src="./../../../public/image-dev.svg"
+            src={imgdev}
             alt="image computer programming"
           />
         </div>
