@@ -13,6 +13,7 @@ import Blog from "./routes/Blog.tsx";
 import AboutMe from "./routes/AboutMe.tsx";
 import ContactMe from "./routes/ContactMe.tsx";
 import Home from "./routes/Home.tsx";
+import 'dotenv/config'
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
