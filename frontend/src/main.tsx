@@ -6,13 +6,13 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
-import Home from "./components/routes/Home.tsx";
 import { ThemeProvider } from "./providers/ThemeProvider.tsx";
 import Layout from "./providers/Layout.tsx";
-import Projects from "./components/routes/Projects.tsx";
-import Blog from "./components/routes/Blog.tsx";
-import AboutMe from "./components/routes/AboutMe.tsx";
-import ContactMe from "./components/routes/ContactMe.tsx";
+import Projects from "./routes/Projects.tsx";
+import Blog from "./routes/Blog.tsx";
+import AboutMe from "./routes/AboutMe.tsx";
+import ContactMe from "./routes/ContactMe.tsx";
+import Home from "./routes/Home.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

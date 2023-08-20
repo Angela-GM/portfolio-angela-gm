@@ -1,7 +1,7 @@
 import { TfiGithub, TfiLinkedin } from "react-icons/tfi";
 import { FaFilePdf } from 'react-icons/fa'
-import imgdev  from '../../assets/image-dev.svg'
-import cvPdf from '../../assets/cv-angela-garcia-fullstack.pdf'
+import imgdev  from '../assets/image-dev.svg'
+import cvPdf from '../assets/cv-angela-garcia-fullstack.pdf'
 function Home() {
   return (
     <div className="container min-h-screen2 mx-auto max-w-screen-xl dark:bg-bg-primary dark:text-text-primary overflow-y-hidden">
