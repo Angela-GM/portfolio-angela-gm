@@ -22,14 +22,14 @@ function Home() {
               <TfiGithub />
             </a>
             <a className=" rounded text-teal-500 p-2 hover:bg-teal-500 hover:text-white transition duration-300"
-              href={cvPdf}
+              href="https://www.linkedin.com/in/angela-garcia-mu/"
               target="_blank"
             >
               <TfiLinkedin />
             </a>
             <a className=" rounded text-teal-500 p-2 hover:bg-teal-500 hover:text-white transition duration-300"
               href="../../../public/cv-angela-garcia-fullstack.pdf"
-              download="cv-angela-gm-dev-fullstack.pdf"
+              download={cvPdf}
             >
               <FaFilePdf />
             </a>
