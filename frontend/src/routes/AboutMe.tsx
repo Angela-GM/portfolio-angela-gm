@@ -61,20 +61,31 @@ function AboutMe() {
     };
 
     fetchAngela();
-    // console.log(angela);
   }, []);
 
   // Borrar este useEffect cuando haya imprimito el objeto 'angela'
-  useEffect(() => {
-    console.log(angela);
-  }, [angela]);
+  // useEffect(() => {
+  //   console.log(angela);
+  // }, [angela]);
 
   return (
-    <div className="container mx-auto max-w-screen-xl dark:bg-bg-primary dark:text-text-primary">
+    <div className="container mx-auto max-w-screen-xl dark:bg-bg-primary dark:text-text-primary m-auto flex flex-col ">
       <div>
-        <h1 className="font-bold text-5xl my-4">About me</h1>
-        <p>{angela?.aboutme}</p>
-        <h2>Estudios</h2>
+        <div className="flex flex-row items-center justify-around">
+          <div>
+            <img
+              className="h-64 w-64 object-cover grayscale rounded-full"
+              src={angela?.photo}
+              alt="Angela GM"
+            />
+          </div>
+          <div className="w-1/2 mt-10">
+            <h1 className="font-bold text-5xl mb-8">About me<span className="text-teal-500"> ;</span></h1>
+            <p>{angela?.aboutme}</p>
+          </div>
+        </div>
+        <div></div>
+        <h2 className="font-semibold text-2xl my-16">Estudios</h2>
         {angela?.studies.map((study) => (
           <ul>
             <li key={study._id}>
@@ -89,7 +100,7 @@ function AboutMe() {
       </div>
 
       <div>
-        <h2>Mi Stack</h2>
+        <h2 className="font-semibold text-2xl my-16">Mi Stack</h2>
         <h3>Lenguajes de programación</h3>
         {angela?.skills.programmingLang.map((lang) => (
           <ul>
@@ -99,7 +110,7 @@ function AboutMe() {
       </div>
 
       <div>
-        <h3>Frameworks Front</h3>
+        <h3 className="font-semibold text-lg my-8">Frameworks Front</h3>
         {angela?.skills.frameworks.map((framework) => (
           <ul>
             <li>{framework}</li>
@@ -108,7 +119,7 @@ function AboutMe() {
       </div>
 
       <div>
-        <h3>Librerías</h3>
+        <h3 className="font-semibold text-lg my-8">Librerías</h3>
         {angela?.skills.libraries.map((library) => (
           <ul>
             <li>{library}</li>
@@ -117,7 +128,7 @@ function AboutMe() {
       </div>
 
       <div>
-        <h3>Backend</h3>
+        <h3 className="font-semibold text-lg my-8">Backend</h3>
         {angela?.skills.backend.map((backend) => (
           <ul>
             <li>{backend}</li>
@@ -126,7 +137,7 @@ function AboutMe() {
       </div>
 
       <div>
-        <h3>Bases de datos</h3>
+        <h3 className="font-semibold text-lg my-8">Bases de datos</h3>
         {angela?.skills.databases.map((database) => (
           <ul>
             <li>{database}</li>
@@ -135,7 +146,7 @@ function AboutMe() {
       </div>
 
       <div>
-        <h3>Testing</h3>
+        <h3 className="font-semibold text-lg my-8">Testing</h3>
         {angela?.skills.testing.map((test) => (
           <ul>
             <li>{test}</li>
@@ -144,7 +155,7 @@ function AboutMe() {
       </div>
 
       <div>
-        <h3>Herramientas</h3>
+        <h3 className="font-semibold text-lg my-8">Herramientas</h3>
         {angela?.skills.tools.map((tool) => (
           <ul>
             <li>{tool}</li>
@@ -153,7 +164,7 @@ function AboutMe() {
       </div>
 
       <div>
-        <h3>Otras</h3>
+        <h3 className="font-semibold text-lg my-8">Otras</h3>
         {angela?.skills.others.map((other) => (
           <ul>
             <li>{other}</li>
@@ -162,7 +173,7 @@ function AboutMe() {
       </div>
 
       <div>
-        <h2>Idiomas</h2>
+        <h2 className="font-semibold text-2xl my-16">Idiomas</h2>
         <ul>
           <li>Español: {angela?.languages.spanish}</li>
           <li>Inglés: {angela?.languages.english}</li>

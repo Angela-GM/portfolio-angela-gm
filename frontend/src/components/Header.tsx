@@ -15,7 +15,7 @@ function Header({ toggleTheme, theme }: HeaderProps) {
       >
         <div className="container mx-auto max-w-screen-xl hidden h-20 items-center md:flex justify-between">
           <Link to={"/"} className="hidden text-2xl font-bold md:inline-block">
-            Angela GM<span className="text-teal-500">;</span>
+            Angela GM<span className="text-teal-500"> ;</span>
           </Link>
           <div className="flex justify-end">
             <div className="flex gap-6 items-center cursor-pointer ">
