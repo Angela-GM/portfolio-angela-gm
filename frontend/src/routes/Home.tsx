@@ -4,7 +4,7 @@ import imgdev  from '../assets/image-dev.svg'
 import cvPdf from '../assets/cv-angela-garcia-fullstack.pdf'
 function Home() {
   return (
-    <div className="container min-h-screen2 mx-auto max-w-screen-xl dark:bg-bg-primary dark:text-text-primary overflow-y-hidden">
+    <div className="container min-h-screen2 mx-auto max-w-screen-xl dark:bg-bg-primary dark:text-text-primary ">
       <div className="flex flex-row w-full justify-between items-center my-6">
         <div className="w-1/2">
           <h1 className="font-bold text-5xl my-4">Hola, soy Angela GM<span className="text-teal-500">;</span></h1>
