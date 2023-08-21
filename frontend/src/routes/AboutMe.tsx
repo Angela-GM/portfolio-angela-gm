@@ -1,5 +1,5 @@
 import { AxiosResponse } from "axios";
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 import { getAllInfoAngela } from "../services/lib/angela";
 
 interface Contact {
@@ -46,29 +46,102 @@ interface Angela {
 }
 
 function AboutMe() {
-  const [angela, setAngela] = useState<Angela[]>([])
+  const [angela, setAngela] = useState<Angela | null>(null);
 
-useEffect(() => {
+  useEffect(() => {
     // Definir una función asincrónica dentro del useEffect para poder usar 'await'
     const fetchAngela = async () => {
       try {
         const response: AxiosResponse = await getAllInfoAngela();
         console.log(response.data[0]);
-        setAngela(response.data);
+        setAngela(response.data[0]);
       } catch (error) {
         console.error("Error al obtener los cursos:", error);
-      } 
+      }
     };
-   
-    fetchAngela()
-    console.log(angela)
+
+    fetchAngela();
+    // console.log(angela);
   }, []);
-  
+
+  // Borrar este useEffect cuando haya imprimito el objeto 'angela'
+  useEffect(() => {
+    console.log(angela);
+  }, [angela]);
+
   return (
-<div className="container min-h-screen2 h-screen mx-auto max-w-screen-xl dark:bg-bg-primary dark:text-text-primary">
-  About Me
+    <div className="container min-h-screen2 h-screen mx-auto max-w-screen-xl dark:bg-bg-primary dark:text-text-primary">
+      <h1 className="font-bold text-5xl my-4">About me</h1>
+      <p>{angela?.aboutme}</p>
+      <h2>Estudios</h2>
+      {angela?.studies.map((study) => (
+        <ul>
+          <li key={study._id}>
+            <small>{study.date}</small>
+            <h3>
+              {study.name} en {study.place}
+            </h3>
+            <p>{study.description}</p>
+          </li>
+        </ul>
+      ))}
+      ;<h2>Mi Stack</h2>
+      <h3>Lenguajes de programación</h3>
+      {angela?.skills.programmingLang.map((lang) => (
+        <ul>
+          <li>{lang}</li>
+        </ul>
+      ))}
+      <h3>Frameworks Front</h3>
+      {angela?.skills.frameworks.map((framework) => (
+        <ul>
+          <li>{framework}</li>
+        </ul>
+      ))}
+      <h3>Librerías</h3>
+      {angela?.skills.libraries.map((library) => (
+        <ul>
+          <li>{library}</li>
+        </ul>
+      ))}
+      <h3>Backend</h3>
+      {angela?.skills.backend.map((backend) => (
+        <ul>
+          <li>{backend}</li>
+        </ul>
+      ))}
+      <h3>Bases de datos</h3>
+      {angela?.skills.databases.map((database) => (
+        <ul>
+          <li>{database}</li>
+        </ul>
+      ))}
+      <h3>Testing</h3>
+      {angela?.skills.testing.map((test) => (
+        <ul>
+          <li>{test}</li>
+        </ul>
+      ))}
+      <h3>Herramientas</h3>
+      {angela?.skills.tools.map((tool) => (
+        <ul>
+          <li>{tool}</li>
+        </ul>
+      ))}
+      <h3>Otras</h3>
+      {angela?.skills.others.map((other) => (
+        <ul>
+          <li>{other}</li>
+        </ul>
+      ))}
+      <h2>Idiomas</h2>
+      <ul>
+        <li>Español: {angela?.languages.spanish}</li>
+        <li>Inglés: {angela?.languages.english}</li>
+        <li>Catalán: {angela?.languages.catalan}</li>
+        </ul>
     </div>
-  )
+  );
 }
 
-export default AboutMe
+export default AboutMe;

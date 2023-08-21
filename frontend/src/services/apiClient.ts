@@ -23,9 +23,6 @@ axiosClient.interceptors.response.use(
     console.error(`Looks like there was a problem. Status Code: ${res.status}`);
     return Promise.reject(error);
   }
-)
+);
 
-
-export default (
-    axiosClient
-)
+export default axiosClient;
