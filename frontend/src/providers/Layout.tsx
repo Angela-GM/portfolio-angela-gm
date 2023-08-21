@@ -9,7 +9,7 @@ type Props = {
 function Layout({children}: Props) {
     const { theme, toggleTheme } = useContext(ThemeContext)
   return (
-    <div className={`bg-white dark:bg-bg-primary ${theme} suave dark:suave`}>
+    <div className={`bg-white dark:bg-bg-primary ${theme} dark:suave`}>
     <Header toggleTheme={toggleTheme} theme={theme} />
     {children}
 </div>
