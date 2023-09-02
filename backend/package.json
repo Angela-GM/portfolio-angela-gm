@@ -65,6 +65,9 @@
       "json",
       "ts"
     ],
+    "engines":{
+      "node": "15.x"
+    },
     "rootDir": "src",
     "testRegex": ".*\\.spec\\.ts$",
     "transform": {
