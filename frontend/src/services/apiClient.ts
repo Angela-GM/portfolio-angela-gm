@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "https://portfolio-angela-gm-production.up.railway.app/";
+const BASE_URL = "https://portfolio-heoc.onrender.com/";
 
 const axiosClient = axios.create({
   baseURL: BASE_URL,
